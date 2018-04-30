@@ -1,19 +1,19 @@
-let state = {
+const state = {
   isToggleOn: true
 }
 
-function setState(newState) {
-  Object.assign(state, newState)
+function setState (fn) {
+  Object.assign(state, fn(state))
   render()
 }
 
-function handleClick() {
-  setState({
-    isToggleOn: !state.isToggleOn
-  })
+function handleClick () {
+  setState(prevState => ({
+    isToggleOn: !prevState.isToggleOn
+  }))
 }
 
-function toggleComponent({ isToggleOn }) {
+function toggle ({ isToggleOn }) {
   return `
     <button onclick="handleClick()">
       ${isToggleOn ? 'ON' : 'OFF'}
@@ -21,13 +21,11 @@ function toggleComponent({ isToggleOn }) {
   `
 }
 
-function render() {
+function render () {
   notReactDOM.render(
-    () => toggleComponent(state),
+    toggle(state),
     document.getElementById('root')
   )
 }
 
-$(function () {
-  render()
-})
+render()
