@@ -1,10 +1,30 @@
 {
+  "name": "not-react-dom",
+  "version": "1.0.0",
+  "description": "A minimal implementation of a React-like library",
+  "keywords": [
+    "dom",
+    "minimal",
+    "react"
+  ],
+  "bugs": {
+    "url": "https://github.com/gabmontes/exploring-not-react/issues"
+  },
+  "license": "Unlicense",
+  "author": "Gabriel Montes <gabriel@utoctadel.com.ar>",
+  "files": [
+    "src"
+  ],
+  "main": "src/not-react.js",
+  "repository": "gabmontes/exploring-not-react",
   "devDependencies": {
     "standard": "11.0.1"
   },
   "standard": {
     "globals": [
-      "notReactDOM"
+      "define",
+      "notReactDOM",
+      "self"
     ]
   }
 }
