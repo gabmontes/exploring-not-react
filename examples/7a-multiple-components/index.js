@@ -4,7 +4,7 @@ const listItems = numbers.map(number => `
   <li>${number}</li>
 `).join('')
 
-notReactDOM.render(
+NotReactDom.render(
   `<ul>${listItems}</ul>`,
   document.getElementById('root')
 )

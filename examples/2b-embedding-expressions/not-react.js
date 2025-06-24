@@ -1,5 +1,5 @@
 ;(function (global) {
-  global.notReactDOM = {
+  global.NotReactDom = {
     render (html, element) {
       element.innerHTML = html
     }

@@ -1,15 +1,17 @@
 # Exploring notReact
 
-This is an exploratory work to determine how a minimal reimplementation of React, called `notReact`, can succeed in replicating the basic behavior of React.
+This is an exploratory work to determine how a minimal re-implementation of React, called `not-react-dom`, can succeed in replicating the basic behavior of React.
 It is so minimal that only accepts pure functional "not-react" components.
 
-The (revised) minimal `notReact` implementation is in `src/not-react.js`.
-It only has **140 bytes** long!
+The (revised) minimal `not-react-dom` implementation is in `src/not-react-dom.js`.
+It is only **571 bytes** long and includes a handy UMD loader!
 And could even be reduced to **44 bytes** if willing to go all the way down :D
 
 ```js
-var notReactDOM={render(h,e){e.innerHTML=h}}
+var NotReactDom={render(e,c){c.innerHTML=e}}
 ```
+
+Note: The ReactDom interface changed starting with React@18.
 
 ## Usage
 
@@ -17,9 +19,19 @@ Check out the `examples` folder. The examples follow the [Quick Start](https://r
 
 ## Install
 
-If you ever dare using this library for anything, you can `npm install not-react-dom`, link to [unpkg](https://unpkg.com) hosted version at https://unpkg.com/not-react-dom or just copy the file! That's it!
+If you ever dare using this library for anything, you can `npm install not-react-dom`, link to [unpkg](https://unpkg.com) hosted version at [https://unpkg.com/not-react-dom](https://unpkg.com/not-react-dom) or just use the following code snippet! That's it!
 
-The library is conveniently wrapped in an UMD loader so it can be safely loaded using RequireJS, Node.js' `require()` or just an `<script>` tag that will expose the global `notReactDOM` object.
+```js
+;(function (global) {
+  global.ReactDOM = {
+    render(element, container) {
+      container.innerHTML = element
+    },
+  }
+})(this)
+```
+
+The library is conveniently wrapped in an UMD loader so it can be safely loaded using RequireJS, Node.js' `require()` or just an `<script>` tag that will expose the global `NotReactDom` object.
 
 ## Conclusions
 

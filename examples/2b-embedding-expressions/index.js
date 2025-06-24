@@ -14,11 +14,11 @@ function getGreeting (user) {
   return '<h1>Hello, Stranger.</h1>'
 }
 
-notReactDOM.render(
+NotReactDom.render(
   getGreeting(user),
   document.getElementById('root')
 )
-notReactDOM.render(
+NotReactDom.render(
   getGreeting(),
   document.getElementById('root2')
 )

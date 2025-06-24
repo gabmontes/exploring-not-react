@@ -81,7 +81,7 @@ function calculator (props) {
 }
 
 function render () {
-  notReactDOM.render(
+  NotReactDom.render(
     calculator(state),
     document.getElementById('root')
   )

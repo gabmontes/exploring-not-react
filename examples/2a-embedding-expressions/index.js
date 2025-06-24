@@ -13,7 +13,7 @@ const element = `
   </h1>
 `
 
-notReactDOM.render(
+NotReactDom.render(
   element,
   document.getElementById('root')
 )

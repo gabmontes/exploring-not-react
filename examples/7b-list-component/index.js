@@ -11,7 +11,7 @@ function numberList (props) {
 }
 
 const numbers = [1, 2, 3, 4, 5]
-notReactDOM.render(
+NotReactDom.render(
   numberList({ numbers }),
   document.getElementById('root')
 )

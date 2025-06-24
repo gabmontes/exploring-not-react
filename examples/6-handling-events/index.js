@@ -22,7 +22,7 @@ function toggle ({ isToggleOn }) {
 }
 
 function render () {
-  notReactDOM.render(
+  NotReactDom.render(
     toggle(state),
     document.getElementById('root')
   )

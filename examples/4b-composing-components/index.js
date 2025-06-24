@@ -12,7 +12,7 @@ function app () {
   `
 }
 
-notReactDOM.render(
+NotReactDom.render(
   app(),
   document.getElementById('root')
 )

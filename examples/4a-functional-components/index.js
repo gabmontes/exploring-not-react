@@ -4,7 +4,7 @@ function welcome (props) {
 
 const element = welcome({ name: 'Sara' })
 
-notReactDOM.render(
+NotReactDom.render(
   element,
   document.getElementById('root')
 )

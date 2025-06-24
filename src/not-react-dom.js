@@ -5,14 +5,14 @@
   } else if (typeof module === 'object' && module.exports) {
     module.exports = factory()
   } else {
-    root.notReactDOM = factory()
+    root.NotReactDOM = factory()
   }
 }(typeof self !== 'undefined' ? self : this, function () {
-  // We just need to implement `notReactDOM` as a function that updates the HTML
+  // We just need to implement `NotReactDom` as a function that updates the HTML
   // content of an element!
   return {
-    render (html, element) {
-      element.innerHTML = html
+    render (element, container) {
+      container.innerHTML = element
     }
   }
 }))
